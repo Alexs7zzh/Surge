@@ -7,5 +7,6 @@ $httpClient.post({
 }, (err, resp, data) => {
   data = JSON.parse(data).shelf
   if (data > 0) $notification.post('New Manga', '', '')
+  else $notification.post('No New Manga', '', '')
   $done()
 })
